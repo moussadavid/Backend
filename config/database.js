@@ -3,12 +3,11 @@ import mysql from "mysql2";
 // create the connection to database
 
 const db = mysql.createConnection({
-  host: "restaurant.cluster-cl6860c2snq2.us-east-1.rds.amazonaws.com",
+  host: "dbrestaurant.cluster-cl6860c2snq2.us-east-1.rds.amazonaws.com",
   user: "admin", //admin
-  password: "Mdpotfm4D6VO8XNu82UH", //Mdpotfm4D6VO8XNu82UH
-  database: "samsDB", //dbrestaurant
-  port: "3306", // Default is 3306
-  connectTimeout: "60000",
+  password: "Mdpotfm4D6VO8XNu82UH", 
+  database: "samsDB", 
+  port: "3306", 
 });
 
 
@@ -21,6 +20,3 @@ db.connect(error => {
 });
 
 export default db;
-
-
-mysql -h dbrestaurant.cluster-cl6860c2snq2.us-east-1.rds.amazonaws.com -P 3306 -u admin -p
